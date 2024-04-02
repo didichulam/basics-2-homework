@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        h1 {
+            color: #1964D6;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 34px;
+            line-height: 48px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 34px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 48px;
+            margin: 0;
+        }
+
+        h3 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18.72px;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        li {
+            border-radius: 10px;
+            padding: 10px 0;
+            margin: 0 auto;
+            max-width: 400px;
+            transition: all 200ms ease-in-out;
+        }
+
+        li:hover {
+            background-color: #FFFBEF;
+
+        }
+
+        button {
+            display: block;
+            font-size: 16px;
+            margin: 20px auto;
+            padding: 16px 24px;
+            border: 1px solid #1964D6;
+            border-radius: 30px;
+            background-color: #1964D6;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            color: white;
+            line-height: 22px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #1964D6;
+            cursor: pointer;
+        }
+
+
+        p {
+            font-size: 18px;
+            opacity: 0.7;
+            text-align: center;
+            font-family: monospace;
+            text-align: center;
+        }
+
+
+        .coded-by {
+            font-family: monospace;
+            text-align: center;
+            font-size: 18px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🌤️
+        <br>
+        Currently 21° in Tokyo
+    </h1>
+
+    <h2>
+        13° / <strong>23°</strong>
+    </h2>
+
+    <ul>
+        <li>
+            <h3>🌧️Tomorrow</h3>
+            <p>10° / <strong>22°</strong></p>
+        </li>
+        <li>
+            <h3>🌥️ Saturday</h3>
+            <p>15° / <strong>17°</strong></p>
+        </li>
+        <li>
+            <h3>☀️ Sunday</h3>
+            <p>25° / <strong>28°</strong></p>
+        </li>
+    </ul>
+
+    <button>Change city</button>
+
+    <div class="coded-by">Coded by Chimdinma Chinedu</div>
+    <script>
+        function weatherCheck() {
+            let city = prompt("What city do you live in?");
+            let temperature = prompt("What is the temperature in your city?");
+            let response = document.querySelector("h1");
+
+            if (temperature < 0) {
+                response.innerHTML = "🥶 <br> Currently " + temperature + "°C in " + city;
+            }
+            else {
+                response.innerHTML = "😁 <br> Currently " + temperature + "°C in " + city;
+            }
+        }
+
+        let changeCity = document.querySelector("button");
+        changeCity.addEventListener("click", weatherCheck);
+
+    </script>
+</body>
+
+</html>
